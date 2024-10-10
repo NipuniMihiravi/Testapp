@@ -1,0 +1,2595 @@
+/* Basic body styling */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white; /* Change this color to your desired background color */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  letter-spacing: 0.01125rem;
+  font-size: 16px; /* Default font size */
+  line-height: 1.5; /* Improve text readability */
+}
+
+/* Responsive font size and layout adjustments */
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 15px; /* Slightly smaller font for medium screens */
+    letter-spacing: 0.01rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px; /* Adjust font size for tablet screens */
+    line-height: 1.6; /* Increase line-height for better readability on smaller screens */
+    letter-spacing: 0.009rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 13px; /* Smaller font for mobile screens */
+    line-height: 1.7; /* Increase line-height further for small screens */
+    letter-spacing: 0.008rem; /* Slightly reduced letter spacing */
+  }
+}
+
+
+/* Style for the cover image container to fit the viewport width */
+.cover-image {
+  position: relative;
+  width: 100%; /* Full width */
+  height: 80vh; /* Adjust height as needed */
+}
+
+/* Style for the carousel dots */
+.slick-dots {
+  position: absolute;
+  bottom: 20px; /* Position the dots 20px from the bottom */
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  z-index: 1000; /* Ensure dots are on top of images */
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px; /* Spacing between dots */
+}
+
+.slick-dots li button {
+  font-size: 20px; /* Size of button for dots */
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.slick-dots li button:before {
+  font-family: "slick";
+  font-size: 12px; /* Size of the dots */
+  line-height: 1;
+  color: black; /* Color for the dots */
+  opacity: 0.75;
+  text-align: center;
+  content: "•";
+}
+
+.slick-dots li.slick-active button:before {
+  color: orange; /* Color for the active dot */
+  opacity: 1;
+}
+
+/* Style for the image container to fit within the carousel */
+.image-wrapper {
+  display: flex; /* Centers content */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+}
+
+/* Ensure the image container has a height of 60vh */
+.image-container {
+  width: 100%;
+  height: 95vh; /* Set height to 95vh */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height of the container */
+  object-fit: cover; /* Maintain aspect ratio while covering the container */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+  .cover-image {
+    height: 70vh; /* Reduce height on medium screens */
+  }
+
+  .slick-dots {
+    bottom: 15px; /* Adjust position of dots */
+  }
+
+  .slick-dots li button {
+    font-size: 18px; /* Smaller button size */
+  }
+
+  .slick-dots li button:before {
+    font-size: 10px; /* Smaller dot size */
+  }
+}
+
+@media (max-width: 768px) {
+  .cover-image {
+    height: 60vh; /* Further reduce height on smaller screens */
+  }
+
+  .slick-dots {
+    bottom: 10px; /* Adjust position of dots */
+  }
+
+  .slick-dots li button {
+    font-size: 16px; /* Smaller button size */
+  }
+
+  .slick-dots li button:before {
+    font-size: 8px; /* Smaller dot size */
+  }
+
+  .image-container {
+    height: 80vh; /* Set height for smaller devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .cover-image {
+    height: 50vh; /* Set height for extra small screens */
+  }
+
+  .slick-dots {
+    bottom: 5px; /* Adjust position of dots */
+  }
+
+  .slick-dots li button {
+    font-size: 14px; /* Smaller button size */
+  }
+
+  .slick-dots li button:before {
+    font-size: 6px; /* Smaller dot size */
+  }
+
+  .image-container {
+    height: 70vh; /* Set height for extra small devices */
+  }
+}
+
+
+.coverr-image1 {
+  width: 100%;
+  height: 140vh; /* 120% of the viewport height */
+
+
+}
+
+.image1-containerr {
+  position: relative;
+  width: 80%;
+  height: 75%; /* Make sure it takes the full height of the carousel-inner */
+  overflow: hidden;
+  display: flex; /* Centers content */
+  margin-left:10px;
+margin-top:50px;
+
+}
+
+.image1-containerr img {
+  width: 100%;
+  height: 80%; /* Make sure it takes the 50% height of the image-container */
+  margin-left:50px;
+
+}
+
+
+
+
+.coverr-image4 {
+  width: 100%;
+  height: 100vh; /* 120% of the viewport height */
+  background-color:#D0F0C0;
+  margin-left:200px;
+   border-top-left-radius: 60px; /* Adjust the value as needed */
+
+}
+
+
+
+
+
+/* Navbar default state */
+.navbar {
+    background-color: transparent; /* Default background color */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+    height: 80px;
+    position: fixed;
+    width: 100%; /* Ensure navbar spans full width */
+    top: 0;
+    left: 0; /* Ensure navbar starts from the left edge of the viewport */
+    z-index: 10;
+}
+
+/* Navbar color when scrolled */
+.navbar.scrolled {
+    background-color: #679267; /* Change to green when scrolled */
+    color: #006241;
+}
+
+/* Navbar container settings */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%; /* Ensure container spans full width */
+    max-width: 1490px; /* Optional: Limit the maximum width for large screens */
+    margin: 0 auto; /* Center the container if max-width is applied */
+    background-color: transparent; /* Ensure background is transparent initially */
+     box-sizing: border-box;
+}
+
+.logo-container {
+    flex-shrink: 0;
+    width: 200px;
+    height: auto;
+    margin-left: 0;
+}
+
+.logo {
+    width:90px; /* Set the width of the logo */
+    height: 55px; /* Set the height of the logo */
+
+
+}
+/* Container for the navbar */
+.nav-links-container {
+    height: 90px;
+    font-family: "Poppins", sans-serif;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+}
+
+/* Navbar links */
+.nav-links {
+    padding: 0;
+    margin: 0;
+    transform: none;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+
+}
+
+/* List items in the navbar */
+.nav-links li {
+    margin-right: 20px;
+    display: inline-block;
+    position: relative; /* Needed for positioning the dropdown */
+}
+
+/* Navbar links (a tags) */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    font-weight: bold;
+    font-size: 13px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for navbar links */
+.nav-links a:hover {
+    color: #006241;
+}
+
+/* Active link style */
+.nav-links a.active {
+    text-decoration: underline;
+    color: pink;
+}
+
+/* Dropdown menu container */
+.nav-links li .dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Places the dropdown directly below the parent link */
+    left: 0;
+    background-color: #87A96B; /* Background color for the dropdown */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds a shadow to the dropdown */
+    min-width: 200px; /* Minimum width for the dropdown */
+    z-index: 1;
+    padding: 0; /* Remove extra padding */
+    text-align: left; /* Left align the dropdown content */
+}
+
+/* Show dropdown on hover */
+.nav-links li:hover .dropdown-content {
+    display: block;
+}
+
+.nav-button{
+ background-color: #317873;
+    color: white;
+    border: 3px solid #71BC78;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight:bold;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto; /* Center the button */
+}
+
+.nav-button:hover {
+    background-color: #006A4E; /* Darker background on hover */
+    border-color: #8FBC8B; /* Darker border on hover */
+}
+
+/* Remove .btn class reference to simplify and avoid confusion */
+.nav-button a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Ensures the entire button area is clickable */
+    width: 100%; /* Make the link take the full width */
+    height: 100%; /* Make the link take the full height */
+}
+
+/* Dropdown menu items */
+.dropdown-content li {
+    display: block;
+    padding: 1px 1px;
+
+}
+
+/* Links in the dropdown */
+.dropdown-content li a {
+    color: white; /* Same color as the main navbar links */
+    text-decoration: none;
+    font-size: 13px;
+    padding: 10px 16px;
+    display: block; /* Full-width clickable area */
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for dropdown links */
+.dropdown-content li a:hover {
+    color: #f8f0f0; /* Changes link color on hover */
+}
+
+/* Optional: Active link style in the dropdown */
+.dropdown-content li a.active {
+    color: pink;
+}
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column; /* Stack navbar items vertically on smaller screens */
+        height: auto; /* Allow height to adjust */
+    }
+
+    .logo-container {
+        margin-left: 0;
+        text-align: center; /* Center logo on mobile */
+    }
+
+    .nav-links-container {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-links li {
+        margin-right: 15px;
+        margin-bottom: 10px; /* Add margin-bottom for spacing on mobile */
+    }
+
+    .nav-links a {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+}
+
+/* Larger screen adjustments */
+@media (min-width: 1200px) {
+    .navbar-container {
+        max-width: 1440px;
+        padding: 0 40px;
+    }
+}
+
+/* Default hidden menu on small screens */
+.nav-links-container {
+  display: none;
+
+}
+
+.navbar .hamburger-icon {
+  display: block;
+  font-size: 20px;
+  cursor: pointer;
+
+}
+
+/* Menu becomes visible when toggled */
+.nav-links-container.open {
+  display: block;
+  background-color: #679267;
+}
+
+/* On larger screens, show the links and hide the hamburger */
+@media (min-width: 768px) {
+  .nav-links-container {
+    display: flex;
+  }
+  .navbar .hamburger-icon {
+    display: none;
+  }
+}
+
+
+
+
+/* General styles for table */
+/* General styles for the table container */
+.about-container {
+  padding: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-top:150px;
+}
+
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Image container styling */
+.about-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex: 1;
+  justify-content: center;
+}
+
+.about-images img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Content container styling */
+.about-content {
+  flex: 1;
+  padding: 20px;
+
+
+}
+
+.about-header {
+  font-size: 26px;
+  letter-spacing: 0.01125rem;
+    color:#008080;
+    text-align: center;
+    weight:bold;
+    font-family: "Poppins", sans-serif;
+
+}
+.about-headerr  {
+  font-size: 15px;
+  letter-spacing: 0.01125rem;
+    color:gray;
+    text-align: center;
+    line-height: 0.5; /* Set line spacing to 1.5 */
+    margin-bottom: 50px;
+    weight:bold;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.about-description {
+  font-size: 15px;
+  letter-spacing: 0.01125rem;
+    margin-bottom: 30px;
+    color: gray; /* Change font color to gray */
+    line-height: 1.75; /* Set line spacing to 1.5 */
+    text-align: center; /* Justify the text */
+    margin-right:20px;
+
+}
+
+.about-btn .btn {
+   background-color: #317873;
+    color: white;
+    border: 3px solid #71BC78;
+    padding: 10px 20px;
+    font-size: 13px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto; /* Center the button */
+
+}
+
+.about-btn .btn:hover {
+  background-color: #006A4E; /* Darker background on hover */
+    border-color: #8FBC8B; /* Darker border on hover */
+
+}
+
+.about-btn .btn a {
+  color: white;
+   text-decoration: none;
+
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .about-grid {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-images {
+    justify-content: flex-start;
+  }
+
+  .about-images img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-header {
+    font-size: 20px;
+  }
+
+  .about-description {
+    font-size: 12px;
+  }
+}
+
+
+
+
+/*service1*/
+/* Styling for the service section */
+/* Styling for the service section */
+.service-section {
+    padding: 40px;
+    background-color: #f5f5f5;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    font-size: 26px;
+    color: #008080;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: bold; /* Corrected from 'weight' to 'font-weight' */
+    font-family: "Poppins", sans-serif;
+}
+
+.service-row {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+.service-image-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.service-image {
+    width: 100%;
+    max-height: 400px; /* Set a max-height for smaller devices */
+    border-radius: 10px;
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+/* Rectangles column styling */
+.service-rectangles-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.service-rectangle {
+    background-color: #8A9A5B;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+}
+
+.service-rectangle:hover {
+    background-color: #679267;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .service-image {
+        max-height: 500px; /* Increase height for medium devices */
+    }
+
+    .section-header {
+        font-size: 24px; /* Slightly smaller font size for header */
+    }
+
+    .service-rectangle {
+        font-size: 14px; /* Adjust font size for rectangles */
+    }
+}
+
+@media (max-width: 768px) {
+    .service-row {
+        flex-direction: column; /* Stack columns vertically on smaller screens */
+        align-items: center; /* Center items */
+    }
+
+    .service-image-column {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .service-image {
+        max-height: 300px; /* Reduce height for mobile devices */
+    }
+
+    .section-header {
+        font-size: 22px; /* Smaller font size for header */
+    }
+
+    .service-rectangle {
+        font-size: 13px; /* Smaller font size for rectangles */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-image {
+        max-height: 200px; /* Further reduce height for very small devices */
+    }
+
+    .section-header {
+        font-size: 20px; /* Smaller font size for very small screens */
+    }
+
+    .service-rectangle {
+        font-size: 12px; /* Further decrease for mobile */
+    }
+}
+
+ /*facility1*/
+ /* Styling for the facility section */
+.facility-section {
+    padding: 40px;
+    background-color: white;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; /* Center-align the heading and content */
+}
+
+.facility-header {
+    font-size: 26px;
+    color: #008080;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: bold; /* Corrected from 'weight' to 'font-weight' */
+    font-family: "Poppins", sans-serif;
+}
+
+.facility-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    justify-content: space-around;
+    align-items: flex-start; /* Align items at the start */
+    margin-bottom: 20px;
+}
+
+.facility-square {
+    width: 200px; /* Base size for larger screens */
+    height: 300px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 10px; /* Add margin for spacing */
+    transition: transform 0.3s; /* Add a hover effect */
+}
+
+.facility-square:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.facility-image2 {
+    width: 100%; /* Make the image responsive to its container */
+    height: 100%; /* Ensure the height is set to 100% of the parent */
+    object-fit: cover; /* Maintain aspect ratio and cover the area without distortion */
+    border-radius: 10px; /* Add rounded corners to the images */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.facility-name {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #006400;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .facility-square {
+        width: 150px; /* Decrease size for medium devices */
+        height: 220px;
+    }
+
+    .facility-header {
+        font-size: 24px; /* Slightly smaller font size for header */
+    }
+
+    .facility-name {
+        font-size: 14px; /* Adjust name font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .facility-row {
+        justify-content: center; /* Center items on smaller screens */
+    }
+
+    .facility-square {
+        width: 100px; /* Smaller size for mobile devices */
+        height: 150px;
+    }
+
+    .facility-header {
+        font-size: 22px; /* Smaller font size for header */
+    }
+
+    .facility-name {
+        font-size: 12px; /* Smaller font size for facility names */
+    }
+}
+
+@media (max-width: 480px) {
+    .facility-square {
+        width: 90%; /* Use most of the screen width on very small devices */
+        height: auto; /* Let the height adjust based on image aspect ratio */
+    }
+
+    .facility-header {
+        font-size: 20px; /* Smaller font size for very small screens */
+    }
+
+    .facility-name {
+        font-size: 11px; /* Further decrease for mobile */
+    }
+}
+
+
+
+/*gallery1*/
+/* Styles for the gallery container */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to the next line if needed */
+    justify-content: space-between; /* Adds space between images */
+    gap: 20px; /* Adjust the gap between images */
+    padding: 20px; /* Optional padding for the container */
+    margin-top:50px;
+}
+
+/* Styles for each image wrapper */
+.image-wrapperr {
+    flex-basis: calc(25% - 20px); /* Ensure 4 images per row with space between them */
+    max-width: 300px; /* Set the width for each image */
+}
+
+/* Styling for the images themselves */
+.gallery-image {
+    width: 100%; /* Make the image fit the wrapper */
+    max-height: 600px; /* Set the maximum height */
+    object-fit: cover; /* Maintain aspect ratio while covering the available space */
+    border-radius: 8px; /* Optional, for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional, for a subtle shadow effect */
+}
+
+.gallery-header h1 {
+    font-size: 26px;
+         color:#008080;
+         text-align: center;
+         margin-bottom: 50px;
+         weight:bold;
+         font-family: "Poppins", sans-serif;
+         text-transform: uppercase;
+}
+
+.gallery-header p {
+    font-size: 15px;
+      margin-bottom: 20px;
+      color: gray; /* Change font color to gray */
+      line-height: 1.7; /* Set line spacing to 1.5 */
+      text-align: center; /* Justify the text */
+}
+
+/* Button styling */
+.gallery-button {
+       background-color: #317873;
+         color: white;
+         border: 3px solid #71BC78;
+         padding: 10px 20px;
+         font-size: 13px;
+         cursor: pointer;
+         display: block;
+         margin: 0 auto; /* Center the button */
+}
+
+.gallery-button:hover {
+      background-color: #006A4E; /* Darker background on hover */
+        border-color: #8FBC8B; /* Darker border on hover */
+}
+.gallery-button .btn a {
+  color: white;
+   text-decoration: none;
+
+}
+.gallery-page {
+    text-align: center;
+    padding: 20px;
+    background-color: #E8F5E0;
+}
+
+/*about page*/
+.coverr-image4 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack elements vertically */
+    margin: 0; /* Remove default margin */
+    height: auto; /* Set height to auto for mobile responsiveness */
+}
+
+.image4-containerr {
+    position: relative;
+    width: 100%;
+    height: auto; /* Change height to auto for flexibility */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Stack images and text vertically */
+    align-items: center; /* Center align */
+    margin: 0 auto; /* Center the container */
+}
+
+.image4-containerr img {
+    width: 100%; /* Set to 100% to fill the width of the container */
+    height: auto; /* Set height to auto for better aspect ratio */
+    max-height: 800px; /* Max height to prevent overflow */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+}
+
+.image4-textt {
+    position: relative;
+    width: 100%; /* Full width */
+    height: auto; /* Auto height */
+    margin-top: 30px; /* Reduce space between image and text */
+    animation: fadeIn 2s ease-in-out; /* Animation added */
+    text-align: center; /* Center align text for mobile */
+    padding: 10px; /* Add padding for better spacing */
+}
+
+.image4-textt h1 {
+    color: black;
+    line-height: 1.2;
+    font-size: 28px; /* Adjust font size for mobile */
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    margin: 0; /* Remove margin to prevent overflow */
+}
+
+.image4-textt p {
+    margin-top: 50px;
+    font-size: 15px; /* Adjust for smaller screens */
+    margin-bottom: 20px;
+    margin-right: 20px;
+    color: gray;
+    line-height: 1.75; /* Set line spacing */
+    text-align: center; /* Center text */
+    font-family: "Poppins", sans-serif;
+}
+
+/* Responsive styles for tablets */
+@media (min-width: 768px) {
+    .image4-containerr {
+        flex-direction: row; /* Show image and text side by side */
+        align-items: center;
+        justify-content: space-between; /* Space between image and text */
+    }
+
+    .image4-containerr img {
+        width: 50%; /* Image takes up half the width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .image4-textt {
+        width: 50%; /* Text container takes up the other half */
+        margin-left: 20px; /* Space between image and text */
+        text-align: left; /* Align text to the left for larger screens */
+    }
+
+    .image4-textt h1 {
+        font-size: 26px; /* Adjust heading size for larger screens */
+    }
+
+    .image4-textt p {
+        font-size: 15px; /* Increase paragraph size */
+    }
+}
+
+/* Responsive styles for desktop */
+@media (min-width: 1024px) {
+    .image4-containerr img {
+        width: 45%; /* Image slightly smaller on desktop */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .image4-textt {
+        width: 45%; /* Text container slightly smaller on desktop */
+    }
+
+    .image4-textt h1 {
+        font-size: 26px; /* Increase heading size */
+    }
+
+    .image4-textt p {
+        font-size: 15px; /* Increase paragraph size */
+    }
+}
+
+
+
+/* Facility Grid Styling */
+.facility-header {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.facility-header h2 {
+    font-size: 26px;
+    color: #008080;
+    font-family: "Poppins", sans-serif;
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+.facility-detail {
+    padding: 0 20px; /* Add horizontal padding for mobile */
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    margin-bottom: 30px;
+    color: gray; /* Change font color to gray */
+    line-height: 1.75; /* Set line spacing to 1.75 */
+    text-align: center; /* Justify the text */
+}
+
+.facility-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+    gap: 20px; /* Gap between cards */
+    margin-top: 20px; /* Top margin for the grid */
+}
+
+/* Facility Card Styling */
+.facility-card {
+    background-color: #ffffff; /* White background for the cards */
+    border-radius: 10px; /* More rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Softer shadow for modern look */
+    overflow: hidden;
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.facility-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.facility-row {
+    display: flex;
+    align-items: center;
+}
+
+/* Facility Image Container */
+.facility-image-container {
+    flex: 1;
+    width: 800px; /* Set width for image container */
+    height: 300px; /* Fixed height for uniformity */
+    overflow: hidden; /* Hide overflow if image exceeds container */
+}
+
+.facility-image {
+    width: 100%; /* Full width to fill the container */
+    height: auto; /* Adjust height to maintain aspect ratio */
+    max-height: 300px; /* Ensure images do not exceed 300px height */
+    object-fit: cover; /* Cover the image without distortion */
+    border-bottom: 3px solid #006241; /* Bottom border for separation */
+}
+
+/* Facility Info Styling */
+.facility-info {
+    flex: 2;
+    padding: 20px; /* Add padding for better spacing */
+    text-align: center; /* Align text to the center for better readability */
+}
+
+.facility-info h2 {
+    color: #006241; /* Facility heading color */
+    font-size: 18px; /* Slightly smaller heading size */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.facility-info p {
+    font-size: 15px; /* Adjusted paragraph size */
+    color: #555; /* Darker gray for better readability */
+    line-height: 1.6; /* Increase line spacing for better readability */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .facility-grid {
+        grid-template-columns: repeat(2, 1fr); /* Maintain two columns */
+    }
+
+    .facility-info h2 {
+        font-size: 22px; /* Adjust heading size for medium devices */
+    }
+}
+
+@media (max-width: 768px) {
+    .facility-grid {
+        grid-template-columns: 1fr; /* One column layout for small devices */
+    }
+
+    .facility-image-container {
+        width: 100%; /* Make image container full width on small screens */
+        height: auto; /* Allow height to adjust automatically */
+    }
+
+    .facility-image {
+        max-height: 200px; /* Limit height for smaller screens */
+    }
+
+    .facility-info h2 {
+        font-size: 20px; /* Smaller heading size for mobile */
+    }
+
+    .facility-detail {
+        font-size: 14px; /* Adjust font size for detail text */
+    }
+}
+
+@media (max-width: 480px) {
+    .facility-image {
+        max-height: 180px; /* Further reduce image height for very small screens */
+    }
+
+    .facility-info h2 {
+        font-size: 18px; /* Further decrease heading size for very small screens */
+    }
+
+    .facility-detail {
+        font-size: 13px; /* Smaller font size for detail text */
+    }
+}
+
+
+
+  /*service cover*/
+  /* Container with the background image */
+/* Container for the cover image */
+.cover-image-background {
+    background-color: #87A96B;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center; /* Ensure text is centered on smaller screens */
+}
+
+/* Main heading in the cover image */
+.image1-text h1 {
+    font-size: 35px;
+    margin-bottom: 30px;
+    margin-top: 100px;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    color: white;
+    text-align: left;
+    margin-right: 0; /* Reset margin-right for consistency */
+}
+
+/* Paragraph text under the heading */
+.image1-text p {
+    max-width: 1200px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: white; /* White text for contrast */
+    line-height: 1.7;
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    padding: 0 20px; /* Add some padding for better readability on smaller screens */
+}
+
+/* Responsive Design */
+
+/* For tablets and larger screens */
+@media screen and (max-width: 1024px) {
+    .cover-image-background {
+        height: 350px; /* Reduce height slightly for tablets */
+        padding: 15px;
+    }
+
+    .image1-text h1 {
+        font-size: 32px; /* Slightly smaller heading */
+        margin-top: 80px;
+    }
+
+    .image1-text p {
+        font-size: 14px; /* Adjust text size for readability */
+    }
+}
+
+/* For mobile screens (smaller devices) */
+@media screen and (max-width: 768px) {
+    .cover-image-background {
+        height: 300px; /* Reduce height for mobile devices */
+        padding: 10px;
+    }
+
+    .image1-text h1 {
+        font-size: 28px; /* Reduce heading size */
+        margin-top: 60px; /* Less top margin on smaller screens */
+    }
+
+    .image1-text p {
+        font-size: 13px;
+    }
+}
+
+/* Further adjustments for smaller mobile devices */
+@media screen and (max-width: 480px) {
+    .cover-image-background {
+        height: 250px; /* Further reduce height */
+    }
+
+    .image1-text h1 {
+        font-size: 24px;
+        margin-top: 40px; /* Reduce top margin further */
+    }
+
+    .image1-text p {
+        font-size: 12px; /* Smaller text for very small screens */
+        padding: 0 10px; /* Add more padding for smaller devices */
+    }
+}
+
+  /*service2*/
+
+
+  /* Style for the table */
+
+
+
+ .service-table {
+     width: 96%; /* Adjust width as needed */
+     border-collapse: collapse;
+     margin: 30px 20px 20px 30px;
+ }
+
+ .service-table tr {
+     border-bottom: 1px solid #ddd;
+ }
+
+ .service-table td {
+     padding: 20px;
+     vertical-align: top;
+ }
+
+ /* Column for images */
+ .image2-column {
+     width: 50%; /* Adjust column width */
+     text-align: center;
+ }
+
+ /* Grid for the 4 images */
+ .image2-grid {
+     display: flex; /* Use flexbox for responsive layout */
+     flex-wrap: wrap; /* Allow wrapping of images on smaller screens */
+     justify-content: space-between;
+     gap: 20px;
+ }
+
+ .service2-image {
+     width: 40%; /* Each image takes roughly 40% of the container */
+     height: auto;
+     margin-right: 20px;
+     border-radius: 8px;
+ }
+
+ /* Responsive Design */
+ @media screen and (max-width: 1200px) {
+     .service2-image {
+         width: 45%; /* Reduce the width of images on medium screens */
+     }
+
+     .service-table td {
+         padding: 15px;
+     }
+ }
+
+ @media screen and (max-width: 768px) {
+     .service2-image {
+         width: 48%; /* Further reduce the width on tablet screens */
+         margin-right: 10px;
+     }
+
+     .service-table td {
+         padding: 10px;
+     }
+
+     .image2-column {
+         width: 100%; /* Full width for smaller screens */
+     }
+
+     .image2-grid {
+         gap: 15px; /* Reduce gap between images */
+     }
+ }
+
+ @media screen and (max-width: 480px) {
+     .service2-image {
+         width: 100%; /* Full width for each image on mobile screens */
+         margin: 10px 0; /* Adjust margin */
+     }
+
+     .service-table {
+         margin: 20px 10px; /* Reduce table margin on mobile */
+     }
+
+     .service-table td {
+         padding: 8px;
+     }
+ }
+
+
+  /* Column for content */
+  .content-column {
+      width: 60%; /* Adjust column width */
+          border: 1px solid #ccc; /* Light gray border */
+          padding: 20px; /* Add some padding inside the box */
+          border-radius: 5px; /* Optional: rounded corners */
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .content-column h2 {
+      font-size: 26px;
+               color:#008080;
+               text-align: center;
+               margin-bottom: 50px;
+               weight:bold;
+               font-family: "Poppins", sans-serif;
+               text-transform: uppercase;
+
+  }
+
+  .content-column p {
+      font-size: 15px;
+            margin-bottom: 30px;
+            color: gray; /* Change font color to gray */
+            line-height: 1.7; /* Set line spacing to 1.5 */
+            text-align: center; /* Justify the text */
+
+  }
+
+  .service-button {
+      background-color: #317873;
+          color: white;
+          border: 3px solid #71BC78;
+          padding: 10px 20px;
+          font-size: 13px;
+          cursor: pointer;
+          display: block;
+          margin: 0 auto; /* Center the button */
+
+  }
+
+  .service-button:hover {
+       background-color: #006A4E; /* Darker background on hover */
+         border-color: #8FBC8B; /* Darker border on hover */
+
+  }
+  .service-button .btn a {
+    color: white;
+     text-decoration: none;
+
+  }
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+      .image2-column,
+      .content-column {
+          width: 100%; /* Stack columns on smaller screens */
+      }
+
+      .image2-grid {
+          flex-direction: column; /* Stack images vertically */
+          align-items: center; /* Center images */
+      }
+
+      .service2-image {
+          width: 80%; /* Adjust image width on smaller screens */
+          margin-bottom: 20px; /* Add space between images */
+      }
+
+      .image1-text h1 {
+          font-size: 26px; /* Smaller font size on mobile */
+          margin: 50px 0 20px; /* Adjust margins */
+      }
+
+      .image1-text p {
+          font-size: 12px; /* Smaller font size on mobile */
+      }
+  }
+
+  @media (max-width: 480px) {
+      .image1-text h1 {
+          font-size: 20px; /* Even smaller font size for very small screens */
+      }
+
+      .image1-text p {
+          font-size: 12px; /* Smaller font size for very small screens */
+      }
+  }
+
+
+  /* Reservation Form */
+  .reservation-form-container {
+    max-width: 1300px;
+    height: auto;
+    margin: 0 auto;
+    padding: 30px; /* Increase padding for better spacing */
+    border: 3px solid #2E8B57;
+    border-radius: 10px;
+    background-color: #E5E4E2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .reservation-form-container h2 {
+    font-size: 26px;
+             color:#008080;
+             text-align: center;
+            margin-bottom:20px;
+             weight:bold;
+             font-family: "Poppins", sans-serif;
+             text-transform: uppercase;
+
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Add more space between rows */
+  }
+
+  .inputGroup {
+    flex: 1;
+    margin-right: 15px; /* Space between input groups */
+  }
+
+  .inputGroup:last-child {
+    margin-right: 0;
+  }
+
+  .label {
+    display: block; /* Ensure labels are on their own line */
+    margin-bottom: 10px; /* Add space between label and input */
+    font-weight: bold;
+    font-size: 15px;
+     color: gray; /* Change font color to gray */
+
+
+  }
+
+  .input {
+    width: 90%; /* Use full width of container */
+    padding: 10px; /* Increase padding for better readability */
+    margin-bottom: 15px; /* Add space between inputs and rows */
+    border-radius: 5px;
+    border: 3px solid #2E8B57;
+  }
+
+  textarea {
+    width: 100%;
+    padding: 10px; /* Match padding with inputs */
+    margin-bottom: 20px; /* Add space below textarea */
+    border-radius: 5px;
+    border: 3px solid #2E8B57;
+    min-height: 100px; /* Slightly increase height */
+  }
+
+  .res-button {
+     background-color: #317873;
+        color: white;
+        border: 3px solid #71BC78;
+        padding: 10px 20px;
+        font-size: 13px;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto; /* Center the button */
+  }
+   .res-button:hover {
+         background-color: #006A4E; /* Darker background on hover */
+            border-color: #8FBC8B; /* Darker border on hover */
+
+    }
+    .res-button .btn a {
+      color: white;
+       text-decoration: none;
+       }
+
+    /*Package*/
+
+    .package-container{
+        width: 100%; /* Full width of the container */
+        height: auto; /* Height adjusts based on content */
+        margin: 0 auto; /* Centers the container */
+
+        box-sizing: border-box; /* Ensures padding is included in the total width */
+    }
+
+
+.package-table {
+    background-color: #87A96B;
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Cover package styles */
+.cover-package {
+    width: 50%; /* Adjust as needed */
+}
+
+/* Image gallery layout */
+.image-gallery-package {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping of images */
+    gap: 10px; /* Space between images */
+}
+
+/* Gallery image styling */
+.gallery-image-package {
+    width: 100%; /* Full width of the cell */
+    height: 300px; /* Maintain aspect ratio */
+    max-width: 600px; /* Set a max width for images */
+    margin-top: 100px;
+    margin-left: 100px; /* Adjust this to center images */
+}
+
+/* Package content styling */
+.package-content {
+    width: 50%; /* Adjust as needed */
+    padding: 20px; /* Padding for comfort */
+}
+
+/* Package content text styling */
+.package-content-text {
+    padding: 20px; /* Padding for comfort */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.package-content-text h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-top: 100px;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    color: white;
+}
+
+.package-content-text p {
+    max-width: 1200px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: white; /* Change font color to gray */
+    line-height: 1.7; /* Set line spacing to 1.5 */
+    text-align: left; /* Justify the text */
+    font-family: "Poppins", sans-serif;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    .cover-package,
+    .package-content {
+        width: 70%; /* Adjust width for medium screens */
+    }
+
+    .gallery-image-package {
+        margin-top: 20px; /* Adjust margin */
+    }
+
+    .package-content-text h1 {
+        font-size: 28px; /* Slightly smaller font size */
+    }
+
+    .package-content-text p {
+        font-size: 14px; /* Slightly smaller font size */
+    }
+}
+
+@media (max-width: 992px) {
+    .cover-package,
+    .package-content {
+        width: 80%; /* Adjust width for smaller screens */
+    }
+
+    .gallery-image-package {
+        margin-top: 10px; /* Further reduced margin */
+    }
+
+    .package-content-text h1 {
+        font-size: 26px; /* Smaller font size */
+    }
+
+    .package-content-text p {
+        font-size: 13px; /* Smaller font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .package-table {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 10px; /* Reduced padding */
+    }
+
+    .cover-package,
+    .package-content {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .gallery-image-package {
+        height: auto; /* Allow images to scale */
+    }
+
+    .package-content-text h1 {
+        margin-top: 10px; /* Further reduced margin */
+    }
+
+    .package-content-text p {
+        font-size: 12px; /* Smaller font size */
+    }
+}
+
+
+   /*Package Details*/
+   /* Main container for the package section */
+   .package-container1 {
+       max-width: 1200px; /* Limits the width of the container */
+       margin: 0 auto; /* Centers the container */
+       padding: 20px; /* Adds padding around the container */
+       background-color: #f9f9f9; /* Light background color for contrast */
+       border-radius: 8px; /* Rounded corners */
+       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+   }
+
+   /* Heading for the package section */
+   .package-heading1 h1 {
+       font-size: 26px;
+       color: #008080;
+       text-align: center;
+       margin-bottom: 50px;
+       margin-top: 50px;
+       font-weight: bold; /* Corrected 'weight' to 'font-weight' */
+       font-family: "Poppins", sans-serif;
+       text-transform: uppercase;
+   }
+
+   .package-heading1 h1::after {
+       content: "";
+       display: block;
+       width: 100px; /* Adjust width as needed */
+       height: 3px; /* Adjust thickness */
+       background-color: #008080; /* Same color as the text */
+       margin: 10px auto 0; /* Adds space between text and the line */
+   }
+
+   .package-heading1 p {
+       font-size: 15px;
+       margin-bottom: 20px;
+       color: gray; /* Change font color to gray */
+       line-height: 1.7; /* Set line spacing to 1.5 */
+       text-align: center; /* Center the text */
+   }
+
+   /* Styles for the table */
+
+
+   .package-table1 {
+       width: 100%; /* Full width of the container */
+       border-collapse: collapse; /* Remove gaps between table cells */
+   }
+
+   /* Content cell styling */
+   .package-content1 {
+       background-color: #fff; /* White background for the cell */
+       border: 1px solid #4F7942; /* Light gray border */
+       border-radius: 5px; /* Rounded corners */
+       height: 80px; /* Set a fixed height to reduce the content height */
+       display: flex; /* Use flexbox for centering */
+       align-items: center; /* Vertically center the content */
+       justify-content: center; /* Horizontally center the content */
+       padding: 10px; /* Adjust padding to control the inner spacing */
+       box-sizing: border-box; /* Ensure padding is included in the total height */
+   }
+
+   /* Styles for the content text */
+   .package-content-text1 h2 {
+       color: #006241;
+       font-size: 25px;
+       font-weight: bold;
+       font-family: "Poppins", sans-serif;
+       text-align: center; /* Horizontally center the text */
+       margin: 0; /* Remove any default margin */
+   }
+
+   .cover-package1 {
+       padding: 20px;
+       text-align: center;
+   }
+
+   .image-gallery1-package {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       gap: 30px;
+   }
+
+   /* Responsive Design */
+
+   /* For tablets and larger screens */
+   @media screen and (max-width: 1024px) {
+       .package-heading1 h1 {
+           font-size: 24px; /* Slightly smaller font size for tablets */
+       }
+
+       .package-heading1 p {
+           font-size: 14px; /* Slightly smaller font size for tablets */
+       }
+
+       .package-content-text1 h2 {
+           font-size: 22px; /* Slightly smaller font size for tablets */
+       }
+
+       .package-content1 {
+           height: auto; /* Allow content cell height to adjust */
+       }
+   }
+
+   /* For mobile screens (smaller devices) */
+   @media screen and (max-width: 768px) {
+       .package-heading1 h1 {
+           font-size: 22px; /* Adjust font size for mobile */
+           margin-bottom: 30px; /* Reduce margin for mobile */
+       }
+
+       .package-heading1 p {
+           font-size: 13px; /* Adjust font size for mobile */
+       }
+
+       .package-content-text1 h2 {
+           font-size: 20px; /* Adjust font size for mobile */
+       }
+
+       .package-content1 {
+           flex-direction: column; /* Stack contents vertically on mobile */
+           height: auto; /* Allow cell height to adjust */
+       }
+
+       .image-gallery1-package {
+           flex-direction: column; /* Stack images vertically on mobile */
+           gap: 20px; /* Reduce gap on mobile */
+       }
+
+       .image-gallery1-package img {
+           max-width: 100%; /* Ensure images are responsive */
+           height: auto; /* Allow height to adjust */
+       }
+   }
+
+   /* Further adjustments for very small mobile devices */
+   @media screen and (max-width: 480px) {
+       .package-heading1 h1 {
+           font-size: 20px; /* Smaller font size for very small devices */
+       }
+
+       .package-heading1 p {
+           font-size: 12px; /* Smaller font size for very small devices */
+       }
+
+       .package-content-text1 h2 {
+           font-size: 18px; /* Smaller font size for very small devices */
+       }
+
+       .package-menu-image img {
+           width: 100%; /* Full width for small devices */
+           height: auto; /* Adjust height automatically */
+       }
+   }
+
+
+   /* Styling for the images */
+   .gallery-image1-package {
+     width: 100%;
+     max-width: 300px; /* Limit the maximum width of images */
+     height: auto;
+     border-radius: 10px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+     object-fit: cover; /* Ensure images are cropped appropriately */
+   }
+
+   .gallery-image1-package:hover {
+     transform: scale(1.05); /* Slight zoom on hover */
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhance the shadow on hover */
+   }
+
+   /* Responsive design: adjust layout for mobile screens */
+   @media (max-width: 768px) {
+     .gallery-image1-package {
+       max-width: 100%; /* Images take up full width on smaller screens */
+       margin-bottom: 15px;
+     }
+   }
+
+   @media (max-width: 480px) {
+     .image-gallery1-package {
+       gap: 10px; /* Reduce gap between images for smaller screens */
+     }
+   }
+
+
+
+
+   /* Message for no images */
+   .cover-package1 p {
+       text-align: center; /* Center align the message */
+       color: #d9534f; /* Red color for emphasis */
+       font-size: 15px; /* Font size for the message */
+   }
+
+.package-menu-image {
+    display: flex;
+    flex-wrap: wrap; /* Allow images to wrap to the next line */
+    justify-content: center; /* Center the images horizontally */
+    gap: 20px; /* Set the gap between images */
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Default styles for package menu images */
+.package-menu-image img {
+    width: 300px; /* Set the width for larger screens */
+    height: 300px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensures the images maintain aspect ratio */
+}
+
+/* Responsive Design */
+
+/* For tablets and larger screens */
+@media screen and (max-width: 1024px) {
+    .package-menu-image img {
+        width: 450px; /* Slightly reduce width for tablets */
+        height: 250px; /* Adjust height for tablets */
+    }
+}
+
+/* For mobile screens (smaller devices) */
+@media screen and (max-width: 768px) {
+    .package-menu-image {
+        flex-direction: column; /* Stack images vertically */
+        align-items: center; /* Center images vertically */
+    }
+
+    .package-menu-image img {
+        width: 200px; /* Allow images to take 90% of the container width */
+        height: 300px; /* Adjust height automatically */
+        margin: 10px; /* Add vertical margin around each image */
+    }
+}
+
+/* Further adjustments for very small mobile devices */
+@media screen and (max-width: 480px) {
+    .package-menu-image img {
+        width: 300px; /* Allow images to take 90% of the container width */
+                height: 300px; /* Adjust height automatically */
+                margin: 10px;
+    }
+}
+
+/*Gallery*/
+/* General Styles for Gallery */
+
+.full-gallery-heading1 h1 {
+       font-size: 26px;
+                color:#008080;
+                text-align: center;
+                margin-top: 150px;
+                weight:bold;
+                font-family: "Poppins", sans-serif;
+                text-transform: uppercase;
+   }
+
+   .full-gallery-heading1 h1::after {
+       content: "";
+       display: block;
+       width: 100px; /* Adjust width as needed */
+       height: 3px; /* Adjust thickness */
+       background-color: #008080; /* Same color as the text */
+       margin: 10px auto 0; /* Adds space between text and the line */
+   }
+
+   .full-gallery-heading1 p {
+       font-size: 15px;
+             margin-bottom: 20px;
+             color: gray; /* Change font color to gray */
+             line-height: 1.7; /* Set line spacing to 1.5 */
+             text-align: center; /* Justify the text */
+   }
+.full-gallery-container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.galleries-container {
+  width: 100%;
+  max-width: 1200px; /* Add max-width to prevent stretching on large screens */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.galleries-button-group {
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.galleries-form-toggle-button {
+
+
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: green;
+  font-size: 15px; /* Updated font size */
+  transition: background-color 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+
+.galleries-form-toggle-button:hover {
+  font-weight:bold;
+}
+
+.galleries-form-toggle-button.active {
+  text-decoration: underline;
+  color: #00693E;
+  font-weight:bold;
+}
+
+/* Style for Gallery Images */
+.galleries-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+
+}
+
+/* Individual Gallery Image */
+.galleries-image {
+  width: 100%; /* Responsive width */
+  max-width: 300px; /* Limit maximum width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+  object-fit: cover; /* Ensure the image covers the container */
+  transition: transform 0.3s ease;
+}
+
+.galleries-image:hover {
+  transform: scale(1.05);
+}
+
+p {
+  font-size: 15px;
+  color: #555;
+  text-align: center;
+}
+
+.cover2-image2-background {
+  background-color: #87A96B;
+  width: 100%;
+  height: 400px; /* Adjust height as needed */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.image1-text2 h1 {
+  font-size: 26x;
+  margin-bottom: 30px;
+  margin-top: 100px;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  color: white;
+}
+
+.image1-text2 p {
+  max-width: 1200px;
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: white;
+  line-height: 1.7;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Responsive Styles */
+
+/* For screens smaller than 768px (Mobile Devices) */
+@media (max-width: 768px) {
+  .full-gallery-container {
+    padding: 10px;
+  }
+
+  .galleries-form-toggle-button {
+    font-size: 12px; /* Smaller font size for buttons */
+    padding: 8px 12px;
+    margin-right: 5px;
+  }
+
+  .galleries-images {
+    margin-top: 50px; /* Adjust margin for mobile */
+    gap: 10px;
+  }
+
+  .galleries-image {
+    max-width: 100%; /* Make image full width on smaller screens */
+    width: calc(100% - 20px); /* Add some padding */
+  }
+
+  .image1-text2 h1 {
+    font-size: 26px; /* Smaller font size for mobile */
+  }
+
+  .image1-text2 p {
+    font-size: 12px;
+  }
+}
+
+/* For screens larger than 1200px (Large screens) */
+@media (min-width: 1200px) {
+  .galleries-form-toggle-button {
+    font-size: 17px; /* Larger font size for buttons */
+    padding: 12px 18px;
+  }
+
+  .galleries-images {
+    gap: 20px; /* Increase space between images */
+  }
+
+  .galleries-image {
+    max-width: 350px; /* Allow larger images on big screens */
+  }
+
+  .image1-text2 h1 {
+    font-size: 60px; /* Larger font for headings */
+  }
+
+  .image1-text2 p {
+    font-size: 20px; /* Larger font for paragraph text */
+  }
+}
+
+/*contact page*/
+/* General container for the layout */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    max-height: 800px;
+    background-color: #87A96B; /* Light background color for contrast */
+    flex-wrap: wrap; /* Allows wrapping of content on smaller screens */
+}
+
+/* Table styling */
+.contact-table {
+    width: 100%;
+    border-spacing: 20px;
+}
+
+/* Left side: image container */
+.contact-image-container {
+    width: 50%;
+    padding-right: 20px; /* Adds space between image and contact details */
+}
+
+.contact-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover; /* Keeps the image proportionally scaled */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the image */
+}
+
+/* Right side: contact details */
+.contact-details-container {
+    width: 50%;
+    padding-left: 20px; /* Adds space between image and contact details */
+    text-align: left;
+}
+
+/* Contact details styling */
+.contact-details1 h1 {
+    font-size: 35px;
+    margin-bottom: 30px;
+    margin-top: 100px;
+    margin-right: 200px;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    color: white;
+}
+
+.contact-details1 p {
+    max-width: 1200px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: white; /* Change font color to white */
+    line-height: 1.7;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.contact-details1 ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-details1 li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.7;
+}
+
+.contact-details1 li strong {
+    color: #000;
+}
+
+/* Additional info section */
+.additional-info p {
+    max-width: 100%;
+    font-size: 15px;
+    margin: 50px 20px;
+    color: gray;
+    line-height: 1.7;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.additional-info h1 {
+    font-size: 26px;
+    color: #008080; /* Change heading color */
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .contact-image-container,
+    .contact-details-container {
+        width: 100%; /* Make both sections take full width on smaller screens */
+        padding: 0;
+        margin-bottom: 20px; /* Adds space between the two sections */
+    }
+
+    .contact-details1 h1 {
+        font-size: 28px;
+        margin-top: 50px;
+        margin-right: 0;
+    }
+
+    .contact-details1 p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-details1 h1 {
+        font-size: 24px;
+        margin-top: 30px;
+    }
+
+    .contact-details1 p {
+        font-size: 12px;
+    }
+
+    .additional-info p {
+        font-size: 14px;
+    }
+
+    .additional-info h1 {
+        font-size: 22px;
+    }
+}
+
+
+
+
+/*Footer*/
+/* Footer Container */
+.footer {
+  background-color: #679267;
+  width:100%;
+  margin-top:30px;
+
+}
+.logos {
+    display: flex;
+    justify-content: center; /* Center the logo horizontally */
+    align-items: center; /* Center the logo vertically */
+    margin-top:30px;
+    margin-left:-150px;
+
+}
+
+.logos img {
+    max-width: 100px; /* Set the maximum width of the logo */
+    height: 60px; /* Maintain aspect ratio */
+}
+
+.section__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer__col {
+  flex: 1;
+  margin-left:50px;
+  min-width: 200px;
+}
+.footer__col h4{
+  color:white;
+  font-size:20px;
+  margin-left:40px;
+}
+
+
+.section__header {
+  font-size: 25px;
+  margin-bottom: 1rem;
+}
+
+.section__description {
+  font-size: 15px;
+  color: white;
+  line-height: 1.75;
+  margin-top:40px;
+}
+.section__description1 {
+  font-size: 15px;
+  color: white;
+  line-height: 1.5;
+  margin-left:-100px;
+
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: brown;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  margin-top:40px;
+}
+
+.btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer__links {
+  list-style-type: none;
+  padding: 0;
+  margin-left:40px;
+
+}
+
+.footer__links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer__links a {
+  color: white;
+  text-decoration: none;
+  font-size:13px;
+}
+
+.footer__links a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer__socials a img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer__bar {
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem;
+  margin-top: 50px;
+  font-size: 5px;
+}
+
+/* Calender */
+
+/* Overall Page Styling */
+
+
+/* Calendar and Form Container */
+.calendar-page-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #87A96B; /* Set page background color */
+}
+
+.image-section {
+    flex: 1;
+    max-width: 45%;
+    text-align: center;
+    margin: 0 10px; /* Add horizontal margin */
+}
+
+.image-section h2 {
+    margin-bottom: 30px;
+    color: white;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+}
+
+.image-section p {
+    font-size: 15px;
+    margin-bottom: 30px;
+    color: white; /* Change font color to gray */
+    line-height: 1.75; /* Set line spacing to 1.5 */
+    text-align: center; /* Justify the text */
+    margin-right: 20px;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    max-width: 700px;
+    border-radius: 10px;
+}
+
+.full-calender-container {
+    flex: 1;
+    max-width: 70%;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 130px;
+    background-color: #8FBC8B;
+}
+
+.calendar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #679267;
+    margin-top: 130px;
+    border-radius: 10px;
+    margin-right:200px;
+}
+
+.h2 {
+    margin-bottom: 20px;
+    margin-bottom: 50px;
+    color: white;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+}
+
+.calendar-view {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 250px;
+    background-color: #679267;
+}
+
+.calendar-view h3 {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+}
+
+.cell {
+    padding: 5px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    max-width:200px;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+    display: flex; /* Make the cell a flex container */
+    flex-direction: column; /* Stack items vertically */
+}
+
+.cell button {
+    background-color: #679267;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: auto; /* Align button to the right */
+}
+
+.cell button:hover {
+    background-color: #8FBC8B;
+}
+
+
+
+select:disabled {
+    color: black; /* Change font color to black when disabled */
+    background-color: #A9BA9D; /* Optional: change background color */
+    cursor: not-allowed; /* Optional: change cursor to indicate it's disabled */
+    font-weight: bold;
+}
+
+.terms-conditions {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    text-align: left; /* Left-align text */
+    width: 100%;
+    max-width: 500px; /* Max width for larger screens */
+    margin: 0 auto; /* Center the container */
+}
+
+.terms-conditions h2 {
+    color: #317873; /* Main heading color */
+    font-size: 18px; /* Font size for main heading */
+}
+
+.terms-conditions h3 {
+    color: #679267; /* Subheading color */
+    font-size: 16px; /* Font size for subheading */
+}
+
+.terms-conditions p {
+    margin: 20px 0; /* Space between paragraphs */
+    color: black; /* Paragraph color */
+    font-size: 13px; /* Font size for paragraphs */
+    text-align: left; /* Left-align text */
+    border-bottom: 1px solid #ddd; /* Add a bottom border */
+    padding-bottom: 10px; /* Space between text and border */
+}
+
+.terms-conditions ul {
+    margin-left: 20px; /* Indent for list */
+    font-size: 13px; /* Font size for lists */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    .terms-conditions {
+        max-width: 80%; /* Use more width on medium screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .terms-conditions h2 {
+        font-size: 16px; /* Smaller heading */
+    }
+
+    .terms-conditions h3 {
+        font-size: 14px; /* Smaller subheading */
+    }
+
+    .terms-conditions p {
+        font-size: 12px; /* Smaller paragraph font size */
+    }
+
+    .terms-conditions ul {
+        font-size: 12px; /* Smaller list font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .terms-conditions {
+        max-width: 95%; /* Almost full width on smaller screens */
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .terms-conditions h2 {
+        font-size: 14px; /* Even smaller heading */
+    }
+
+    .terms-conditions h3 {
+        font-size: 12px; /* Smaller subheading */
+    }
+
+    .terms-conditions p {
+        font-size: 11px; /* Smaller paragraph font size */
+    }
+
+    .terms-conditions ul {
+        font-size: 11px; /* Smaller list font size */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .calendar-page-container {
+        flex-direction: column; /* Stack the sections vertically */
+        align-items: stretch; /* Ensure children stretch to full width */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .image-section, .full-calender-container {
+        max-width: 100%; /* Allow full width on small screens */
+        margin: 10px 0; /* Ensure vertical spacing */
+        flex: 1; /* Allow to fill available space */
+    }
+
+    /* Adjust padding and margin for calendar view on mobile */
+    .calendar-view {
+        padding: 10px; /* Less padding on smaller screens */
+        height: auto; /* Allow height to adjust as needed */
+        max-width: 100%;
+        flex: 1;
+    }
+
+
+}
+
+
+
+
+
+
+/* Custom styles for calendar tiles based on reservation status */
+.reservation-yellow {
+    background-color: yellow !important;
+    color: black !important;
+}
+
+.reservation-pink {
+    background-color: pink !important;
+    color: black !important;
+}
+
+.reservation-red {
+    background-color: red !important;
+    color: white !important;
+}
+
+
